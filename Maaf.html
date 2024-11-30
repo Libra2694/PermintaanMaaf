@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+<head>
+<title>Script HTML buat Kamu - Feeldream.id</title>
+<meta name="description" content="HTML Replit Coding">
+<!-- 
+  Made with love by Rayys!
+  
+     Blog: feeldream.id
+     Instagram: @rayyarrr
+     TikTok: @feelthisray
+     Email: rayyarr73@gmail.com
+     
+  Thanks to all <3
+-->
+</head>
+<body>
+	
+   <!-- Ganti Audio di sini -->
+   <audio src="https://feeldreams.github.io/audio/seandainya.mp3" id="linkmp3" class="sembunyi"></audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="https://feeldreams.github.io/papjalan2.jpeg" id="wallpaper"/>
+   </div>
+   
+   <div id='Content'>
+
+     <div id="ftAwal">
+       <!-- Stiker Pembuka -->
+       <img src="https://feeldreams.github.io/pandaputih.gif" id="ftoAwal"/>
+     </div>
+
+     <div id="loveIn">
+       <!-- Tombol LOVE --><label class='lovein'>&#10084;</label>
+     </div>
+     <p id="ket">Sentuh LOVEnya!</p>
+
+     <div class="kumpulanstiker">
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/bwa2.gif" id="fotostiker"/>
+         <img src="https://feeldreams.github.io/wortel.gif" id="fotostiker1"/>
+         <img src="https://feeldreams.github.io/ngumpet.gif" id="fotostiker2"/>
+         <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker3"/>
+     </div>
+     
+     <div class="kumpulanwp" class="sembunyi">
+     	<img src="https://feeldreams.github.io/papjalan.jpeg" id="wallpaper2"/>
+         <img src="https://feeldreams.github.io/papjalan3.jpeg" id="wallpaper3"/>
+         <img src="https://feeldreams.github.io/paplalulintas4.jpeg" id="wallpaper4"/>
+     </div>
+     
+     <div><div id='pergeseran'>
+     	
+        <p><b>
+	        <span>hallo cantik</span>
+        </b></p>
+        
+        <p><b>
+	        <span>maaf yaa kalo aku<br>suka bkin kamu kesel</span>
+        </b></p>
+
+        <p><b>
+	        <span>aku cuma mau bilang</span>
+        </b></p>
+        
+        <p><b>
+	        <span>pncet ini dlu ya ❤️</span>
+        </b></p>
+        
+     </div></div>
+
+     <p id="ketgeser">Klik untuk Geser!</p>
+
+     <div><blockquote id='bq'>
+      <p id="kalimat">Ya Humaira,<br> Aku tahu wajahmu semerah apel malang yang belum waktunya dipetik. Aku mohon maaf, ya. Aku sungguh menyesal atas apa yang terjadi. Kalau ada yang harus aku lakukan, bilang saja, aku siap memanjat tebing ,atau aku harus mengepel laut, atau bahkan mencuci piringmu sebulan penuh!<br><br> Tapi begini, kalau memang kehadiranku seperti nyamuk di malam hari yang mengganggu tidurmu, aku akan mengerti, kok. Walaupun jujur, kalau harus menjauh darimu... rasanya kayak nyemplung kolam tanpa pelampung. Berat, Humaira, berat. <br><br> Tapi serius, aku harap hatimu diberi ketenangan. Jangan lupa, Allah itu cinta banget sama orang yang pemaaf, loh. Jadi, gimana kalau sekarang kita mulai bab baru? Kan katanya, apel yang tadi merah bisa jadi manis kalau kita simpan dengan baik. Hehe. </p>
+    
+     <div id="button-container" style="text-align: center; margin-top: 20px;">
+       <h3>Maafin aku yaa</h3>
+       <button id="yesButton" style="margin-right: 10px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Ya</button>
+       <button id="noButton" style="padding: 10px 20px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer;">Tidak</button>
+     </div>
+     </blockquote>
+     </div>
+     
+   </div>
+
+<script>
+  const noButton = document.getElementById('noButton');
+  const yesButton = document.getElementById('yesButton');
+
+  noButton.addEventListener('mouseover', () => {
+    const randomX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
+    const randomY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
+    noButton.style.position = 'absolute';
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
+  });
+
+  yesButton.addEventListener('click', () => {
+    Swal.fire({
+      title: 'Terimakasih sudah maafin aku!',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    }).then(() => {
+      window.location.href = 'https://wa.link/u6dgm6';
+    });
+  });
+</script>
+
+<script>const body = document.querySelector("body"); const iniwp = [];iden = 1; iniwp[1] = wallpaper.src; iniwp[2] = wallpaper2.src; iniwp[3] = wallpaper3.src; iniwp[4] = wallpaper4.src; katakata = kalimat.innerHTML;kalimat.innerHTML = ""; const swalst = Swal.mixin({timer: 2500, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); audio = new Audio('' + linkmp3.src); ftganti=0;fungsi=0;fungsiAwal=0;deffotostiker=fotostiker.src;function berjatuhan() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);Content.style = "opacity:1;margin-top:14vh"; const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80,}); </script>
+<script src="https://feeldreams.github.io/dibacadong/script.js"></script>
+</body>
+</html>
